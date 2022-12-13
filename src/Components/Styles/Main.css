@@ -1,0 +1,49 @@
+
+.grid_container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  .menu {
+    position: sticky;
+    top: 0;
+  }
+  .content {
+  
+  }
+  
+  .footer{
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background-color: #555;
+    color: rgb(160, 159, 159);
+  }
+  
+  /*Navbar START*/
+  .navbar {
+    display: flex ;
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 1s;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  /*Navbar END*/

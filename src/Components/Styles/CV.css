@@ -1,0 +1,62 @@
+.main_container {
+    display: flex;
+    background-color: white;
+    column-gap: 20px;
+}
+
+.content {
+    flex: 3;
+    padding: 10px;
+}
+
+.addInfo {
+    flex: 1;
+    padding: 10px;
+}
+.img {
+    height: 70px;
+    width:  70px;
+}
+
+.main_div {
+
+}
+
+.main_div > p > span {
+    color: rgb(28, 8, 204);
+    font-weight: bold;
+}
+
+.main_div > p {
+    margin: 3px 0px 10px 0px;
+}
+
+.bage_img {
+    height: 100px;
+    width: 100px;
+}
+.bage_img:hover {
+    opacity: 0.5;
+}
+
+.bage_div {
+
+}
+
+.name_div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.name_p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.position_p {
+    font-size: 20px;
+    color: rgb(28, 8, 204);
+    margin: 5px 0px;
+}
