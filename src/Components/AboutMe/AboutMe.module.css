@@ -1,0 +1,26 @@
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.history_column_gap {
+  column-gap: 10px;
+}
+
+.menu_item_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  @media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 10px;
+        column-gap: 0px;
+    }
+  }
