@@ -45,13 +45,8 @@
         column-gap: 0px;
     }
 
-    .menu_item {
-        width: 70%;
-        height: 70%;
-    }
-
     .item_caption {
-        font-size: 10px;
+        font-size: 30px;
       }
     
   }
