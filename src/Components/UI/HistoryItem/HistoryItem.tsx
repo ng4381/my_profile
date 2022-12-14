@@ -5,7 +5,7 @@ export interface IHistoryItem {
     title: string
     subtitle: string
     children: ReactNode
-    img: any
+    img?: any
 }
 export const HistoryItem = (props: IHistoryItem) => {
     return (

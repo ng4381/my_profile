@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import '../Styles/Main.css'
+import cl from './Main.module.css'
 import { Routers } from '../Routing/Routing'
 import { NavLink } from 'react-router-dom'
 
@@ -9,9 +9,9 @@ export interface IMain {
 
 export const Main = (props: IMain) => {
   return (
-    <div className='grid_container'>
-      <div className='menu'>
-        <div className="navbar">
+    <div className={cl.grid_container}>
+      <div className={cl.menu}>
+        <div className={cl.navbar}>
           {/* <a className="" href="#" >About me</a>
             <a className="active" href="#" >CV</a>
             <a className="" href="#" >Portfolio</a> */}
@@ -20,12 +20,12 @@ export const Main = (props: IMain) => {
           ))}
         </div>
       </div>
-      <div className='content'>
+      <div className={cl.content}>
 
         {props.children}
 
       </div>
-      <div className='footer'>
+      <div className={cl.footer}>
         &copy; Nikita Goloveshko
       </div>
     </div>

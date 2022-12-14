@@ -1,5 +1,6 @@
 import React from "react";
-import '../../Styles/Personal.css'
+import cl from '../AboutMe.module.css'
+import { HistoryItem } from "../../UI/HistoryItem/HistoryItem";
 
 export const IT = () => {
     const gym1 = require('../../Img/Sportlife/gym1.png')
@@ -8,112 +9,97 @@ export const IT = () => {
     const dummy = require('../../Img/Sportlife/dummy.png')
     const karate = require('../../Img/Sportlife/karate.png')
 
-
-
-    return (
-        <div className="personal_content">
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2005-2007</h2>
-                    <p>Optima / BusinessPro</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Technology: Fast Repord, Cristal Report</p>
+    const historyItems = [
+        {
+            year: '2005-2007',
+            title: 'Optima / BusinessPro',
+            subtitle: 'Started to lern',
+            children:
+                <><p>Technology: Fast Repord, Cristal Report</p>
                     <ul>
                         <li>Design of new reports using SQL</li>
                         <li>Implementing programm on a side of the client</li>
                         <li>Teaching employes</li>
                     </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2008-2019</h2>
-                    <p>Altair / EVK Group</p>
-                </div>
-
-                <div className="personal_item_content">
+                </>
+        },
+        {
+            year: '2008-2019',
+            title: 'Altair / EVK Group',
+            subtitle: 'Started to lern',
+            children:
+                <>
                     <p>Technology: 1C</p>
                     <ul>
                         <li>Disign and developing new features</li>
                         <li>Implementing programm on a side of the client</li>
                         <li>Teaching employes</li>
                     </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2019</h2>
-                    <p>Java</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Beginig of my journey</p>
+                </>
+        },
+        {
+            year: '2019',
+            title: 'Java',
+            subtitle: 'Beginig of my journey',
+            children:
+                <>
                     <ul>
                         <li>Learning ... Learning ... Learning</li>
                     </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2021</h2>
-                    <p>Java OCA</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Pass the exam</p>
-                    <ul>
-                        <li>Pass the exam and become Oracle certified associated</li>
-                    </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2019</h2>
-                    <p>Ladoga Energo</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Full-stack developer</p>
+                </>
+        },
+        {
+            year: '2019',
+            title: 'Ladoga Energo',
+            subtitle: 'Full-stack developer',
+            children:
+                <>
                     <ul>
                         <li>First commercial project</li>
                     </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2020</h2>
-                    <p>EPAM</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Java developer</p>
+                </>
+        },
+        {
+            year: '2021',
+            title: 'Java OCA',
+            subtitle: 'Pass the exam',
+            children:
+                <>
+                    <ul>
+                        <li>Pass the exam and become Oracle certified associated</li>
+                    </ul>
+                </>
+        },
+        {
+            year: '2020',
+            title: 'EPAM',
+            subtitle: 'Java developer',
+            children:
+                <>
                     <ul>
                         <li>Software developer</li>
                     </ul>
-                </div>
-
-            </div>
-            <div className="personal_item">
-                <div className="personal_item_header">
-                    <h2>2020</h2>
-                    <p>Luxoft</p>
-                </div>
-
-                <div className="personal_item_content">
-                    <p>Java developer</p>
+                </>
+        },
+        {
+            year: '2020',
+            title: 'Luxoft',
+            subtitle: 'Java developer',
+            children:
+                <>
                     <ul>
                         <li>Software developer</li>
                     </ul>
-                </div>
+                </>
+        },
 
-            </div>
+    ]
+
+    return (
+        <div className={`${cl.container} ${cl.history_column_gap}`}>
+            {historyItems.map((items, index)=>(
+                <HistoryItem {...items}/>
+            ))}
         </div >
     )
 }
